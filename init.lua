@@ -1,48 +1,29 @@
---[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-========                                    .-----.          ========
-========         .----------------------.   | === |          ========
-========         |.-""""""""""""""""""-.|   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||   KICKSTART.NVIM   ||   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||                    ||   |-----|          ========
-========         ||:Tutor              ||   |:::::|          ========
-========         |'-..................-'|   |____o|          ========
-========         `"")----------------(""`   ___________      ========
-========        /::::::::::|  |::::::::::\  \ no mouse \     ========
-========       /:::========|  |==hjkl==:::\  \ required \    ========
-========      '""""""""""""'  '""""""""""""'  '""""""""""'   ========
-========                                                     ========
-=====================================================================
-=====================================================================
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.keymap.set("", "<Space>", "<Nop>")
-vim.g.mapleader = " "
+vim.keymap.set('', '<Space>', '<Nop>')
+vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 
+vim.keymap.set('v', '<Tab>', '>gv', { desc = 'Indent visual selection' })
+vim.keymap.set('v', '<S-Tab>', '<gv', { desc = 'Unindent visual selection' })
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
-vim.g.mapleader = ' '
-vim.g.mapleader = ' '
-vim.g.mapleader = ' '
-vim.g.mapleader = ' '
-vim.g.mapleader = ' '
-vim.g.mapleader = ' '
-vim.g.mapleader = ' '
-vim.g.mapleader = ' '
-vim.g.mapleader = ' '
-vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.mapleader = ' '
 
 -- Make line numbers default
 vim.opt.number = true
