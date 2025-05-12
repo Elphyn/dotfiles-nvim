@@ -24,7 +24,8 @@ vim.keymap.set('v', '<S-Tab>', '<gv', { desc = 'Unindent visual selection' })
 -- vim.g.mapleader = ' '
 -- vim.g.mapleader = ' '
 -- vim.g.mapleader = ' '
-
+vim.opt.number = true
+vim.opt.relativenumber = true
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
