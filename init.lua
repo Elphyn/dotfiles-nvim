@@ -14,16 +14,6 @@ vim.keymap.set('v', '<S-Tab>', '<gv', { desc = 'Unindent visual selection' })
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
--- vim.g.mapleader = ' '
--- vim.g.mapleader = ' '
--- vim.g.mapleader = ' '
--- vim.g.mapleader = ' '
--- vim.g.mapleader = ' '
--- vim.g.mapleader = ' '
--- vim.g.mapleader = ' '
--- vim.g.mapleader = ' '
--- vim.g.mapleader = ' '
--- vim.g.mapleader = ' '
 vim.opt.number = true
 vim.opt.relativenumber = true
 -- Make line numbers default
@@ -357,6 +347,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
+      vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, {})
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.
