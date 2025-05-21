@@ -77,6 +77,31 @@ return {
       end,
       desc = 'Debug: See last session result.',
     },
+
+    {
+      '<F6>',
+      function()
+        require('dap').terminate()
+      end,
+      desc = 'Debug: Terminate',
+    },
+    {
+      '<F9>',
+      function()
+        -- Safely restart only if session exists
+        local dap = require 'dap'
+        local session = dap.session()
+        if session then
+          dap.terminate()
+          vim.defer_fn(function()
+            dap.run_last()
+          end, 500) -- Wait a bit before restarting
+        else
+          dap.run_last()
+        end
+      end,
+      desc = 'Debug: Restart',
+    },
   },
   config = function()
     local dap = require 'dap'
